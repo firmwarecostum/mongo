@@ -455,6 +455,7 @@ add_option(
 
 # Most of the "use-system-*" options follow a simple form.
 for pack in [
+    ('abseil-cpp',),
     (
         'asio',
         'ASIO',
@@ -1607,7 +1608,7 @@ def printLocalInfo():
 
 printLocalInfo()
 
-boostLibs = ["filesystem", "program_options", "system", "iostreams", "thread", "log"]
+boostLibs = ["filesystem", "program_options", "iostreams", "thread", "log"]
 
 onlyServer = len(COMMAND_LINE_TARGETS) == 0 or (len(COMMAND_LINE_TARGETS) == 1 and str(
     COMMAND_LINE_TARGETS[0]) in ["mongod", "mongos", "test"])
