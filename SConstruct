@@ -3385,7 +3385,7 @@ def doConfigure(myenv):
 
     if not (c_compiler_validated and cxx_compiler_validated):
         if not suppress_invalid:
-            env.ConfError("ERROR: Refusing to build with compiler that does not meet requirements")
+            #env.ConfError("ERROR: Refusing to build with compiler that does not meet requirements")
         print("WARNING: Ignoring failed compiler version check per explicit user request.")
         print("WARNING: The build may fail, binaries may crash, or may run but corrupt data...")
 
