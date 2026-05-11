@@ -5070,6 +5070,15 @@ def doConfigure(myenv):
 
     if use_system_version_of_library("snappy"):
         conf.FindSysLibDep("snappy", ["snappy"])
+        
+    if use_system_version_of_library("google-benchmark"):
+        conf.FindSysLibDep("benchmark", ["benchmark"])
+        
+    if use_system_version_of_library("libbson"):
+        conf.FindSysLibDep("bson", ["bson"])
+        
+    if use_system_version_of_library("libmongocrypt"):
+        conf.FindSysLibDep("mongocrypt", ["mongocrypt"])
 
     if use_system_version_of_library("zlib"):
         conf.FindSysLibDep("zlib", ["zdll" if conf.env.TargetOSIs('windows') else "z"])
