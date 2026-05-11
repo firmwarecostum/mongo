@@ -5071,6 +5071,22 @@ def doConfigure(myenv):
     if use_system_version_of_library("snappy"):
         conf.FindSysLibDep("snappy", ["snappy"])
 
+    if use_system_version_of_library("google-benchmark"):
+        conf.FindSysLibDep("benchmark", ["benchmark"])
+
+    if use_system_version_of_library("libbson"):
+        conf.FindSysLibDep("libbson", ["bson-1.0"])
+
+    if use_system_version_of_library("libmongocrypt"):
+        conf.FindSysLibDep("libmongocrypt", ["mongocrypt"])
+
+    if use_system_version_of_library('abseil-cpp'):
+        conf.FindSysLibDep("absl_city", ["absl_city"])
+        conf.FindSysLibDep("absl_hash", ["absl_hash"])
+        conf.FindSysLibDep("absl_int128", ["absl_int128"])
+        #conf.FindSysLibDep("absl_low_level_hash", ["absl_low_level_hash"])
+        conf.FindSysLibDep("absl_raw_hash_set", ["absl_raw_hash_set"])
+
     if use_system_version_of_library("zlib"):
         conf.FindSysLibDep("zlib", ["zdll" if conf.env.TargetOSIs('windows') else "z"])
 
