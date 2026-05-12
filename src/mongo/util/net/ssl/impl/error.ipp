@@ -11,6 +11,8 @@
 #ifndef ASIO_SSL_IMPL_ERROR_IPP
 #define ASIO_SSL_IMPL_ERROR_IPP
 
+#include <asio/ssl/impl/error.ipp>
+
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #endif  // defined(_MSC_VER) && (_MSC_VER >= 1200)
