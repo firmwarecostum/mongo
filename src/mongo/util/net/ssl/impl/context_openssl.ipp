@@ -17,6 +17,7 @@
 #endif  // defined(_MSC_VER) && (_MSC_VER >= 1200)
 
 #include <asio/detail/config.hpp>
+#include <asio/ssl/impl/context.ipp>
 
 #include "mongo/util/net/ssl/context.hpp"
 #include "mongo/util/net/ssl/error.hpp"
