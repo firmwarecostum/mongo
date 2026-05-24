@@ -1760,9 +1760,9 @@ for var in ['CC', 'CXX']:
     if not os.path.isabs(path):
         which = shutil.which(path)
         if which is None:
-            print('{} was not found in $PATH'.format(path))
+            print('{} was not found in $STAGING_DIR'.format(path))
         else:
-            print('{} found in $PATH at {}'.format(path, which))
+            print('{} found in $STAGING_DIR at {}'.format(path, which))
             path = which
 
     realpath = os.path.realpath(path)
